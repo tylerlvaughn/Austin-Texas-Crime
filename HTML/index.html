@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+<body>
+  
+  <div class="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" style="background-color: #0bad100;" href="index.html">Austin, Texas Crime Analysis</a>
+      <button class="navbar-toggler  border border-white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Maps
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="2015map.html">2015 Crime Map</a>
+              <a class="dropdown-item" href="2016map.html">2016 Crime Map</a>
+              <a class="dropdown-item" href="2017map.html">2017 Crime Map</a>
+              <a class="dropdown-item" href="2018map.html">2018 Crime Map</a>
+            </div>
+          </li>
+
+               <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Charts
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="2015chart.html">2015 Crime by Zip Chart</a>
+              <a class="dropdown-item" href="2016chart.html">2016 Crime by Zip Chart</a>
+              <a class="dropdown-item" href="2017chart.html">2017 Crime by Zip Chart</a>
+              <a class="dropdown-item" href="2018chart.html">2018 Crime by Zip Chart</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../js_library/indexjs.html">Total Annual Crimes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Leaflet_Geomap/indexleaf.html.html.">Fun Places</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Austin Crime Analysis</h1>
+      <hr class="my-4">
+      <p>The goal of this analysis is to review the crime data of Austin, Texas. We pulled data from AustinTexas.gov.</p>
+      <p>The purpose to identify the key areas of downtown Austin by zip code and inspect discernible crimes tied to specific zip codes. </p>
+      <p>After we pulled the crime data from AustinTexas.gov, we inserted the recorded crimes over the years 2015-2018 into a SQL Database on PG Admin.</p>
+      <p>We queried the data and exported it to CSV. The CSVs were cleaned in Pandas and we created 2D basic visualizations to help us narrow down the crime data to see patterns.</p>
+      <p>The crimes over the four course period of 2015-2018 were substantial, so it required consierable cleaning. We noticed trends of total increased crime over 2015-2018.</p>
+      <p>We had to modify the data to correct for the incorrect coordinates we obtained by shifting the longitude by the standard error we calculated.</p>
+      <p>From here we narrowed down the zip codes to focus on downtown Austin as the surrouding suburbs were skewing our heatmap.</p>
+      <p>Utimately we decided to focus on the key crimes in their respective zip codes. We compared the crimes in those zip codes over 3 year period to see if we could find any signigicant developments between zip codes. We utilized a new Data Library tool Charts.js to colorfully illustrate the total overall crimes committed each year. Furthermore we compared the locations of these crimes to locations of gun stores, liquor stores, and casinos.</p>
+        </p>
+    </div>
+  </div>
+
+
+
+
+            <div class="col-md-50">
+                <div class="col-md-12">
+                    <h3>Downtown Austin by Zip Code</h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 col-md-6">
+                            <a href="2015chart.html"><img src="../Presentation/AustinZipMap.png" width="100%" alt="Downtown Austin by Zip Code"></a>
+                        </div>
+                       
+                      
+
+        
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+          
+           
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+          
+</body>
+</html>
